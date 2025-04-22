@@ -1,0 +1,42 @@
+/* KenyaVibeHub Custom Styles */
+     :root {
+       --kenya-red: #BB0000; /* Inspired by Kenyan flag */
+       --kenya-green: #006600;
+       --kenya-black: #000000;
+       --kenya-white: #FFFFFF;
+     }
+
+     /* Custom button styles */
+     button {
+       transition: transform 0.2s ease-in-out;
+     }
+     button:hover {
+       transform: scale(1.05);
+       background-color: var(--kenya-red) !important;
+       color: var(--kenya-white) !important;
+     }
+
+     /* Form input focus */
+     input:focus, select:focus {
+       border-color: var(--kenya-green);
+       box-shadow: 0 0 5px var(--kenya-green);
+       outline: none;
+     }
+
+     /* Header animation */
+     h2 {
+       animation: fadeIn 1s ease-in;
+     }
+
+     @keyframes fadeIn {
+       from { opacity: 0; transform: translateY(-10px); }
+       to { opacity: 1; transform: translateY(0); }
+     }
+
+     /* Card hover effect */
+     .card {
+       transition: box-shadow 0.3s ease;
+     }
+     .card:hover {
+       box-shadow: 0 4px 15px rgba(0, 102, 0, 0.3);
+     }
