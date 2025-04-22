@@ -22,8 +22,8 @@
         { name: "Mama Oliech", location: "Kilimani", cuisine: "Kenyan", price: "Affordable", vibe: "Authentic local" },
       ];
       const budgetBuyResults = [
-        { item: "Athleisure Set", vendor: "Mood Over the Moon", price: "KSh 2,500", deal: "30% off" },
-        { item: "Tecno Spark 20", vendor: "Jumia", price: "KSh 12,000", deal: "Flash sale" },
+        { name: "Athleisure Set", vendor: "Mood Over the Moon", price: "KSh 2,500", deal: "30% off" },
+        { name: "Tecno Spark 20", vendor: "Jumia", price: "KSh 12,000", deal: "Flash sale" },
       ];
 
       // Handle form submissions (mock for now, will connect to AI backend)
@@ -56,7 +56,8 @@
 
           {/* Hero Section */}
           <header className="text-center py-12 px-4">
-            <h2 className="text-4xl font-extrabold text-white mb-4">Make Choices Easy精品vibeHub</h2>
+            <img src="images/hero.jpg" alt="Nairobi Vibe" className="w-full h-64 object-cover rounded-lg mb-4" />
+            <h2 className="text-4xl font-extrabold text-white mb-4">Make Choices Easy with KenyaVibeHub</h2>
             <p className="text-lg text-white">Find the best places to eat and budget buys in Nairobi, powered by AI.</p>
           </header>
 
@@ -95,6 +96,7 @@
             <div className="grid gap-4 md:grid-cols-2">
               {restaurantResults.map((restaurant, index) => (
                 <div key={index} className="card bg-white rounded-lg shadow-md p-4">
+                  <img src="images/item.jpg" alt={restaurant.name} className="w-full h-32 object-cover rounded-md mb-2" />
                   <h4 className="text-lg font-semibold">{restaurant.name}</h4>
                   <p className="text-sm text-gray-600">{restaurant.location}</p>
                   <p className="text-sm text-gray-600">{restaurant.cuisine} • {restaurant.price}</p>
@@ -132,7 +134,8 @@
             <div className="grid gap-4 md:grid-cols-2">
               {budgetBuyResults.map((buy, index) => (
                 <div key={index} className="card bg-white rounded-lg shadow-md p-4">
-                  <h4 className="text-lg font-semibold">{buy.item}</h4>
+                  <img src="images/item.jpg" alt={buy.name} className="w-full h-32 object-cover rounded-md mb-2" />
+                  <h4 className="text-lg font-semibold">{buy.name}</h4>
                   <p className="text-sm text-gray-600">{buy.vendor}</p>
                   <p className="text-sm text-gray-600">{buy.price}</p>
                   <p className="text-sm text-blue-600">{buy.deal}</p>
