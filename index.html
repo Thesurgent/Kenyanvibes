@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 font-sans">
   <div id="root"></div>
@@ -55,7 +56,7 @@
 
           {/* Hero Section */}
           <header className="text-center py-12 px-4">
-            <h2 className="text-4xl font-extrabold text-white mb-4">Make Choices Easy with KenyaVibeHub</h2>
+            <h2 className="text-4xl font-extrabold text-white mb-4">Make Choices Easy精品vibeHub</h2>
             <p className="text-lg text-white">Find the best places to eat and budget buys in Nairobi, powered by AI.</p>
           </header>
 
@@ -93,7 +94,7 @@
             {/* Mock Results */}
             <div className="grid gap-4 md:grid-cols-2">
               {restaurantResults.map((restaurant, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-4">
+                <div key={index} className="card bg-white rounded-lg shadow-md p-4">
                   <h4 className="text-lg font-semibold">{restaurant.name}</h4>
                   <p className="text-sm text-gray-600">{restaurant.location}</p>
                   <p className="text-sm text-gray-600">{restaurant.cuisine} • {restaurant.price}</p>
@@ -130,7 +131,7 @@
             {/* Mock Results */}
             <div className="grid gap-4 md:grid-cols-2">
               {budgetBuyResults.map((buy, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-4">
+                <div key={index} className="card bg-white rounded-lg shadow-md p-4">
                   <h4 className="text-lg font-semibold">{buy.item}</h4>
                   <p className="text-sm text-gray-600">{buy.vendor}</p>
                   <p className="text-sm text-gray-600">{buy.price}</p>
@@ -143,7 +144,7 @@
 
           {/* Footer */}
           <footer className="bg-white py-4 text-center">
-            <p className="text-gray-600">&copy; 2025 KenyaVibeHub. Made for Kenyans, by Kenyans.</p>
+            <p className="text-gray-600">© 2025 KenyaVibeHub. Made for Kenyans, by Kenyans.</p>
           </footer>
         </div>
       );
