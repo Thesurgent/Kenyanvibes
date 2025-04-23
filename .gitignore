@@ -1,0 +1,7 @@
+Django
+
+*.pyc pycache/ *.pyo *.pyd .Python env/ venv/ ENV/ *.sqlite3 *.log
+
+Sensitive files
+
+myproject/settings.py
